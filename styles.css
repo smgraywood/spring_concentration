@@ -1,47 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&display=swap");
 
-body{
-    background-image: url(images/background.jpg)
+body {
+	background-image: url(images/background.jpg);
 }
 
-#title1{
-    font-family: 'Glass Antiqua', cursive;
-    color:  #EE85A5;
-    font-size: 6vmin;
-    text-align: center;
+#title1 {
+	font-family: "Glass Antiqua", cursive;
+	color: #ee85a5;
+	font-size: 6vmin;
+	text-align: center;
 }
 
-#title2{
-    font-family: 'Ibarra Real Nova', serif;
-    color:#FEBED5;
-    -webkit-text-stroke-width: .25vmin;
-    -webkit-text-stroke-color: #EE85A5;
-    font-size: 8vmin;
-    text-align: center;
+#title2 {
+	font-family: "Ibarra Real Nova", serif;
+	color: #febed5;
+	-webkit-text-stroke-width: 0.25vmin;
+	-webkit-text-stroke-color: #ee85a5;
+	font-size: 8vmin;
+	text-align: center;
+}
+
+img{
+    height: 15vmin;
+	width: 15vmin;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+	background-color: transparent;
+	height: 20vmin;
+	width: 20vmin;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(160deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+	color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+	color: white;
+	transform: rotateY(180deg);
 }
 
 .gameBoard {
-    justify-content: center;
+	justify-content: center;
 	display: grid;
 	grid-template-columns: repeat(6, 20vmin);
-    margin-top: -1vmin;
+	margin-top: -1vmin;
 }
 
 .gameBoardBox {
-    position: relative;
-    display: flex;
-    height: 15vmin;
-    width:15vmin;
-    padding: 1vmin;
-    margin: 1vmin;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #FEBED5;
-    border-radius: 10vmin;
+	position: relative;
+	display: flex;
+	height: 15vmin;
+	width: 15vmin;
+	padding: 1vmin;
+	margin: 1vmin;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #febed5;
+	border-radius: 10vmin;
 }
 
-.gameBoardBox:hover{
-    box-shadow: 0px .5vmin #EF7C9A;
+.gameBoardBox:hover {
+	box-shadow: 0px 0.5vmin #ef7c9a;
 }
