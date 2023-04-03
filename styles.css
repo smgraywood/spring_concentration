@@ -19,40 +19,81 @@ body {
 	-webkit-text-stroke-color: #ee85a5;
 	font-size: 8vmin;
 	text-align: center;
-    margin-top: -2vmin;
+	margin-top: -2vmin;
 }
 
-#button-div{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: -2vmin;
-    margin-bottom: 3vmin;
+#card-number-choice {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin: 0 auto;
+	flex-direction: column;
+	background-color: #f4f0e7;
+	border-radius: 25px;
+	border: solid 3px black;
+	opacity: 0.8;
+    width: 20vmin;
 }
 
-button{
-    background-color: #F4F0E7;
-    border: solid 5px black;
-    border-radius: 50px;
-    width: 10vmin;
-    height: 4vmin;
-    font-size: 2vmin;
-    opacity: .7;
+label {
+	position: relative;
+	display: flex;
+	height: 3vmin;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2vmin;
+	font-family: "Glass Antiqua", cursive;
 }
 
-button:hover{
-    opacity: 1;
-    box-shadow: 0px 0.5vmin #ef7c9a;
+select {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 3vmin;
+	font-family: "Glass Antiqua", cursive;
+	height: 4vmin;
+	width: 10vmin;
+	font-size: 25px;
+	background-color: black;
+	color: #f4f0e7;
+	border: solid 2px #f4f0e7;
 }
 
-img{
-    height: 15vmin;
+#button-div {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: -2vmin;
+	margin-bottom: 3vmin;
+}
+
+button {
+	background-color: #f4f0e7;
+	border: solid 5px black;
+	border-radius: 50px;
+	width: 10vmin;
+	height: 4vmin;
+	font-size: 2vmin;
+	opacity: 0.7;
+}
+
+button:hover {
+	opacity: 1;
+	box-shadow: 0px 0.5vmin #ef7c9a;
+}
+
+img {
+	height: 15vmin;
 	width: 15vmin;
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
 .flip-card {
 	background-color: transparent;
 	height: 20vmin;
@@ -60,7 +101,10 @@ img{
 	perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-/* This container is needed to position the front and back side */
+/* .flip-card-inner:hover {
+    transform: rotateY(180deg);
+} */
+
 .flip-card-inner {
 	position: relative;
 	width: 100%;
@@ -70,12 +114,11 @@ img{
 	transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-	transform: rotateY(160deg);
+.flip-card-inner:active {
+	transform: scale(0.97);
+	transition: transform 0.2s;
 }
 
-/* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
 	position: absolute;
@@ -85,12 +128,6 @@ img{
 	backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-	color: black;
-}
-
-/* Style the back side */
 .flip-card-back {
 	color: white;
 	transform: rotateY(180deg);
@@ -120,7 +157,6 @@ img{
 .gameBoardBox:hover {
 	box-shadow: 0px 0.5vmin #ef7c9a;
 }
-
 
 /* 
 to do: 
