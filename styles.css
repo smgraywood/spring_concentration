@@ -1,0 +1,28 @@
+body{
+    background-image: url(images/background.jpg)
+}
+
+.gameBoard {
+    justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(6, 20vmin);
+    margin-top: -1vmin;
+}
+
+.gameBoardBox {
+    position: relative;
+    display: flex;
+    height: 15vmin;
+    width:15vmin;
+    padding: 1vmin;
+    margin: 1vmin;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FEBED5;
+    border-radius: 10vmin;
+}
+
+.gameBoardBox:hover{
+    box-shadow: 0px .5vmin #EF7C9A;
+}
