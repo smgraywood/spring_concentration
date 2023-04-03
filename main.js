@@ -1,26 +1,23 @@
 /*----- constants -----*/
-const cards = document.querySelectorAll(".flip-card");
-console.log(cards);
+const cardEls = document.querySelectorAll('.flip-card-inner');
+const cardsContainerEl = document.querySelector('#gameBoard');
 
 /*----- state variables -----*/
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let time;
 
 /*----- cached elements  -----*/
 
 /*----- event listeners -----*/
+cardsContainerEl.addEventListener("click", flipped);
 
-// cards.forEach((card) => card.addEventListener("click", card.style.transform ='rotateY(180deg)'));
-
-
+function flipped(evt) {
+    evt.target.closest(".flip-card-inner").style.transform = "rotateY(180deg)"
+}
 
 /*----- functions -----*/
-
-function clicked(){
-    console.log('clicked')
-    document.getElementsByClassName(".flip-card").style.transform ='rotateY(180deg)'
-}
 
 function flipCard() {
 	if (lockBoard) return;
@@ -66,8 +63,10 @@ function resetBoard() {
 }
 
 (function shuffle() {
-	cards.forEach((card) => {
+	cardEls.forEach((card) => {
 		let ramdomPos = Math.floor(Math.random() * 24);
 		card.style.order = ramdomPos;
 	});
+    cardsContainerEl.append(cardEls)
 })();
+

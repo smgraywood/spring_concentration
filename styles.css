@@ -133,7 +133,7 @@ img {
 	transform: rotateY(180deg);
 }
 
-.gameBoard {
+#gameBoard {
 	justify-content: center;
 	display: grid;
 	grid-template-columns: repeat(6, 20vmin);
