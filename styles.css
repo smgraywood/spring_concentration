@@ -19,6 +19,32 @@ body {
 	-webkit-text-stroke-color: #ee85a5;
 	font-size: 8vmin;
 	text-align: center;
+    margin-top: -2vmin;
+}
+
+#button-div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -2vmin;
+    margin-bottom: 3vmin;
+}
+
+button{
+    background-color: #F4F0E7;
+    border: solid 5px black;
+    border-radius: 50px;
+    width: 10vmin;
+    height: 4vmin;
+    font-size: 2vmin;
+    opacity: .7;
+}
+
+button:hover{
+    opacity: 1;
+    box-shadow: 0px 0.5vmin #ef7c9a;
 }
 
 img{
@@ -94,3 +120,9 @@ img{
 .gameBoardBox:hover {
 	box-shadow: 0px 0.5vmin #ef7c9a;
 }
+
+
+/* 
+to do: 
+-mobile responsivity
+-aria tags */
