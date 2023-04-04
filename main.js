@@ -1,6 +1,9 @@
 /*----- constants -----*/
-const cardEls = document.querySelectorAll('.flip-card-inner');
-const cardsContainerEl = document.querySelector('#gameBoard');
+const cardEls = document.querySelectorAll(".flip-card-inner");
+const cardsContainerEl = document.querySelector("#gameBoard");
+const cards = document.querySelectorAll(".flip-card");
+
+const cardNumberSelector = document.getElementById("select-cards-number");
 
 /*----- state variables -----*/
 let hasFlippedCard = false;
@@ -14,8 +17,22 @@ let time;
 cardsContainerEl.addEventListener("click", flipped);
 
 function flipped(evt) {
-    evt.target.closest(".flip-card-inner").style.transform = "rotateY(180deg)"
+	evt.target.closest(".flip-card-inner").style.transform = "rotateY(180deg)";
 }
+
+cardNumberSelector.addEventListener("change", function () {
+	if (this.getAttribute("name") === "count") {
+		const number = parseInt(this.value);
+		const gameBoardBoxes = document.querySelectorAll(".gameBoardBox");
+		for (let i = 0; i < gameBoardBoxes.length; i++) {
+			if (i < number) {
+				gameBoardBoxes[i].style.display = "block";
+			} else {
+				gameBoardBoxes[i].style.display = "none";
+			}
+		}
+	}
+});
 
 /*----- functions -----*/
 
@@ -63,10 +80,9 @@ function resetBoard() {
 }
 
 (function shuffle() {
-	cardEls.forEach((card) => {
+	console.log("shuffle");
+	cards.forEach((card) => {
 		let ramdomPos = Math.floor(Math.random() * 24);
 		card.style.order = ramdomPos;
 	});
-    cardsContainerEl.append(cardEls)
 })();
-
