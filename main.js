@@ -2,7 +2,7 @@
 const cardEls = document.querySelectorAll(".flip-card-inner");
 const cardsContainerEl = document.querySelector("#gameBoard");
 const cards = document.querySelectorAll(".flip-card");
-
+const startButton = document.querySelector("#start-button");
 const cardNumberSelector = document.getElementById("select-cards-number");
 
 /*----- state variables -----*/
@@ -14,11 +14,9 @@ let time;
 /*----- cached elements  -----*/
 
 /*----- event listeners -----*/
-cardsContainerEl.addEventListener("click", flipped);
+// startButton.addEventListener("click", init)
 
-function flipped(evt) {
-	evt.target.closest(".flip-card-inner").style.transform = "rotateY(180deg)";
-}
+cardsContainerEl.addEventListener("click", flipped);
 
 cardNumberSelector.addEventListener("change", function () {
 	if (this.getAttribute("name") === "count") {
@@ -36,53 +34,70 @@ cardNumberSelector.addEventListener("change", function () {
 
 /*----- functions -----*/
 
-function flipCard() {
-	if (lockBoard) return;
-	if (this === firstCard) return;
+// function init(evt){
+//     evt.target.startTimer()
+// }
 
-	this.classList.add("flip");
+// function startTimer(){
+//     console.log("clicked")
+// }
 
-	if (!hasFlippedCard) {
-		hasFlippedCard = true;
-		firstCard = this;
-		return;
+function flipped(evt) {
+	evt.target.closest(".flip-card-inner").style.transform = "rotateY(180deg)";
+
+	// firstCard = ""
+	// secondCard = ""
+	// if (firstCard === ""){
+	//     evt.target.closest(".flip-card-inner").style.transform = "rotateY(180deg)";
+	//     firstCard = evt.target.closest("img")}
+	//     console.log(evt.target.closest('img'))
+	// if (firstCard !== ""){
+	//     evt.target.closest(".flip-card-inner").style.transform = "rotateY(180deg)";
+	//     secondCard = evt.target.closest('img.src')}
+	// if (firstCard===cardEls.getElementByTagName('img').src && secondCard===cardEls.getElementByTagName('img').src){
+	//     then freeze
+	// }
+}
+
+function checkIfMatch() {
+	let flippedCards = document.querySelectorAll(".flip-card.flipped");
+	if (flippedCards.length === 2) {
+		let card1 = flippedCards[0].getAttribute("data-flowers");
+		let card2 = flippedCards[1].getAttribute("data-flowers");
+		if (card1 === card2) {
+			// cards match, keep them flipped over
+			flippedCards.forEach((card) => card.classList.add("matched"));
+		} else {
+			// cards don't match, flip them back over
+			flippedCards.forEach((card) => card.classList.remove("flipped"));
+		}
 	}
-
-	secondCard = this;
-	checkForMatch();
 }
 
-// function checkForMatch() {
-// 	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-// 	isMatch ? disableCards() : unflipCards();
+
+// function checkIfMatch(){
+//     if (firstCard (need to access source image and compare) === secondCard){
+//         keep cards flipped
+//         and make them unclickable
+//     }
+//     else{
+//         flip cards back (similar to flipped but backwards)
+//         make sure theres a time lapse (timeOut)
+//     }
 // }
 
-// function disableCards() {
-// 	firstCard.removeEventListener("click", flipCard);
-// 	secondCard.removeEventListener("click", flipCard);
+// function checkIfMatch(){
+// //     if(cardEls.getElementByTagName('img').src === cardEls.getElementByTagName('img').src){
 
-// 	resetBoard();
+// //     }
+
 // }
-
-// function unflipCards() {
-// 	lockBoard = true;
-
-// 	setTimeout(() => {
-// 		firstCard.classList.remove("flip");
-// 		secondCard.classList.remove("flip");
-// 		resetBoard();
-// 	}, 1500);
-// }
-
-function resetBoard() {
-	[hasFlippedCard, lockBoard] = [false, false];
-	[firstCard, secondCard] = [null, null];
-}
 
 (function shuffle() {
-	console.log("shuffle");
 	cards.forEach((card) => {
 		let ramdomPos = Math.floor(Math.random() * 24);
 		card.style.order = ramdomPos;
 	});
 })();
+
+//to do startTimer

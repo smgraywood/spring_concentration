@@ -17,24 +17,24 @@
         </label>
         <br>
         <select class = "number-of-cards-menu" name="count" id="select-cards-number">
-            <option id="4" class="card-number-choice" value="4">4 Cards</option>
-            <option id="8" class="card-number-choice" value="8">8 Cards</option>
-            <option id="12" class="card-number-choice" value="12">12 Cards</option>
-            <option id="16" class="card-number-choice" value="16">16 Cards</option>
-            <option id="20" class="card-number-choice" value="20">20 Cards</option>
             <option id="24" class="card-number-choice" value="24">24 Cards</option>
+            <option id="20" class="card-number-choice" value="20">20 Cards</option>
+            <option id="16" class="card-number-choice" value="16">16 Cards</option>
+            <option id="12" class="card-number-choice" value="12">12 Cards</option>
+            <option id="8" class="card-number-choice" value="8">8 Cards</option>
+            <option id="4" class="card-number-choice" value="4">4 Cards</option>
         </select>
     </div>
     <br>
     <div id="button-div">    
-        <button>
+        <button id="start-button">
             START
         </button>
     </div>
 
 
     <div id="gameBoard">
-        <div class="flip-card" data-framework="babys-breath">
+        <div class="flip-card" data-flowers="babys-breath">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="0" class="gameBoardBox"></div>
@@ -44,7 +44,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="babys-breath">
+        <div class="flip-card" data-flowers="babys-breath">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="1" class="gameBoardBox"></div>
@@ -54,7 +54,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="chrysanthemum">
+        <div class="flip-card" data-flowers="chrysanthemum">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="2" class="gameBoardBox"></div>
@@ -64,7 +64,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="chrysanthemum">
+        <div class="flip-card" data-flowers="chrysanthemum">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="3" class="gameBoardBox"></div>
@@ -74,7 +74,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="dahlia">
+        <div class="flip-card" data-flowers="dahlia">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="4" class="gameBoardBox"></div>
@@ -84,7 +84,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card"  data-framework="dahlia">
+        <div class="flip-card"  data-flowers="dahlia">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="5" class="gameBoardBox"></div>
@@ -94,7 +94,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card"  data-framework="daisy">
+        <div class="flip-card"  data-flowers="daisy">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="6" class="gameBoardBox"></div>
@@ -104,7 +104,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="daisy">
+        <div class="flip-card" data-flowers="daisy">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="7" class="gameBoardBox"></div>
@@ -114,7 +114,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="forgetmenot">
+        <div class="flip-card" data-flowers="forgetmenot">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="8" class="gameBoardBox"></div>
@@ -124,7 +124,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="forgetmenot">
+        <div class="flip-card" data-flowers="forgetmenot">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="9" class="gameBoardBox"></div>
@@ -134,7 +134,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="peony">
+        <div class="flip-card" data-flowers="peony">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="10" class="gameBoardBox"></div>
@@ -144,7 +144,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="peony">
+        <div class="flip-card" data-flowers="peony">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="11" class="gameBoardBox"></div>
@@ -154,7 +154,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="pink-daisy">
+        <div class="flip-card" data-flowers="pink-daisy">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="12" class="gameBoardBox"></div>
@@ -164,7 +164,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="pink-daisy">
+        <div class="flip-card" data-flowers="pink-daisy">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="13" class="gameBoardBox"></div>
@@ -174,7 +174,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="poppy">
+        <div class="flip-card" data-flowers="poppy">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="14" class="gameBoardBox"></div>
@@ -184,7 +184,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="poppy">
+        <div class="flip-card" data-flowers="poppy">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="15" class="gameBoardBox"></div>
@@ -194,7 +194,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="ranunculus">
+        <div class="flip-card" data-flowers="ranunculus">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="16" class="gameBoardBox"></div>
@@ -204,7 +204,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="ranunculus">
+        <div class="flip-card" data-flowers="ranunculus">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="17" class="gameBoardBox"></div>
@@ -214,7 +214,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="rose">
+        <div class="flip-card" data-flowers="rose">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="18" class="gameBoardBox"></div>
@@ -224,7 +224,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="rose">
+        <div class="flip-card" data-flowers="rose">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="19" class="gameBoardBox"></div>
@@ -234,7 +234,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="sunflower">
+        <div class="flip-card" data-flowers="sunflower">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="20" class="gameBoardBox"></div>
@@ -244,7 +244,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="sunflower">
+        <div class="flip-card" data-flowers="sunflower">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="21" class="gameBoardBox"></div>
@@ -254,7 +254,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="violet">
+        <div class="flip-card" data-flowers="violet">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="22" class="gameBoardBox"></div>
@@ -264,7 +264,7 @@
                 </div>            
             </div>
         </div>
-        <div class="flip-card" data-framework="violet">
+        <div class="flip-card" data-flowers="violet">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div data-index="23" class="gameBoardBox"></div>
