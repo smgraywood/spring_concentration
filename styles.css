@@ -88,6 +88,15 @@ button:hover {
 	box-shadow: 0px 0.5vmin #ef7c9a;
 }
 
+#status-message{
+	color: #ef7c9a;
+	font-size: 10vmin;
+	text-align: center;
+	text-transform:uppercase;
+	-webkit-text-stroke-width: 0.25vmin;
+	-webkit-text-stroke-color:#febed5;
+}
+
 img {
 	height: 15vmin;
 	width: 15vmin;
