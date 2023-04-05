@@ -17,7 +17,6 @@ let card1;
 let card2;
 
 /*----- cached elements  -----*/
-//maybe store number selected in cardNumberSelector
 
 /*----- event listeners -----*/
 
@@ -56,7 +55,6 @@ function startGame() {
 	timerDiv.style.display = "flex";
 	timer = setInterval(updateTimer, 1000);
 	updateTimer();
-	//reset board
 }
 
 function init() {
@@ -148,5 +146,3 @@ function resetBoard() {
 		card.style.order = ramdomPos;
 	});
 })();
-
-//to do stoptimer when game is won
