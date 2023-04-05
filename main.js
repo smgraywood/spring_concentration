@@ -17,6 +17,7 @@ let card1;
 let card2;
 
 /*----- cached elements  -----*/
+//maybe store number selected in cardNumberSelector
 
 /*----- event listeners -----*/
 
@@ -77,6 +78,7 @@ function flipped(cardContainer) {
 		if (chosen[0] === chosen[1]) {
 			matches++;
 			chosen = [];
+			checkWin();
 		} else {
 			chosen = [];
 			const cardsToFlip = [card1, card2];
@@ -87,41 +89,56 @@ function flipped(cardContainer) {
 			}, 1000);
 		}
 	}
-	// if(matches === 0 && time === 0)
-	//
-	// else{
-
-	// }
-	// render()
 }
 
-function gameOver() {
-	clearInterval(timer);
+function checkWin() {
+	const boardSize = parseInt(cardNumberSelector.value);
+	console.log("boardSize:", boardSize);
+	const totalPairs = boardSize / 2;
+	if (matches === totalPairs) {
+		clearInterval(timer);
+		statusMessage.textContent = "You won!";
+		startButton.style.pointerEvents = "auto";
+		gameBoard.style.pointerEvents = "none";
+		cardNumberSelector.style.pointerEvents = "auto";
+	}
+}
+
+function checkLoss() {
 	document.getElementById("start-button").style.display = "block";
 
-	// if (matches === number of cards selected) {
-	// 	//stop timer
-	// 	statusMessage.textContent = "You won!";
-	// 	startButton.style.pointerEvents = "auto";
-
-	// }
-	// else{
-	statusMessage.textContent = "You lost.";
-	startButton.style.pointerEvents = "auto";
-	gameBoard.style.pointerEvents = "none";
-	cardNumberSelector.style.pointerEvents = "auto";
-	// }
-
-	//reset board
+	const boardSize = parseInt(cardNumberSelector.value);
+	const totalPairs = boardSize / 2;
+	if (timerLeft === 0 && matches !== totalPairs) {
+		statusMessage.textContent = "You lost.";
+		startButton.style.pointerEvents = "auto";
+		gameBoard.style.pointerEvents = "none";
+		cardNumberSelector.style.pointerEvents = "auto";
+		clearInterval(timer)
+	}
 }
 
 function updateTimer() {
 	timerLeft = timerLeft - 1;
-	if (timerLeft >= 0)
+	if (timerLeft >= 0) {
 		document.getElementById(
 			"timer"
 		).innerHTML = `${timerLeft} seconds remaining`;
-	else gameOver();
+	}
+	checkLoss();
+}
+
+function resetBoard() {
+	chosen = [];
+	matches = 0;
+	timerLeft = 60;
+	clearInterval(timer);
+	cards.forEach((card) => {
+		card.querySelector(".flip-card-inner").style.transform =
+			"rotateY(0deg)";
+	});
+	statusMessage.textContent = "";
+	timerDiv.style.display = "none";
 }
 
 (function shuffle() {
