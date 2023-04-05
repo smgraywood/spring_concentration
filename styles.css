@@ -88,6 +88,21 @@ button:hover {
 	box-shadow: 0px 0.5vmin #ef7c9a;
 }
 
+#timer-div{
+	display:none;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+    margin: 0 auto;
+	flex-direction: column;
+	background-color: #f4f0e7;
+	border-radius: 25px;
+	border: solid 3px black;
+	opacity: 0.8;
+    width: 40vmin;
+	padding: 3vmin
+}
+
 #status-message{
 	color: #ef7c9a;
 	font-size: 10vmin;

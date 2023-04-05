@@ -6,6 +6,7 @@ const startButton = document.querySelector("#start-button");
 const cardNumberSelector = document.getElementById("select-cards-number");
 const statusMessage = document.querySelector("#status-message");
 const timeLeft = document.getElementById("timer")
+const timerDiv = document.getElementById("timer-div")
 
 
 /*----- state variables -----*/
@@ -22,7 +23,7 @@ let card2;
 
 cardsContainerEl.addEventListener("click", flipCard);
 
-startButton.addEventListener("click", init)
+startButton.addEventListener("click", startGame)
 
 /*----- functions -----*/
 
@@ -32,19 +33,18 @@ function flipCard(evt){
 	cardContainer.style.transform = 'rotateY(180deg)'
 	flipped(cardContainer)
 }
+function startGame(){
+	init();
+	timerDiv.style.display = 'flex'
+	timer = setInterval(updateTimer, 1000);
+	updateTimer()
+}
 
-
-
-init();
-
-function init(evt) {
+function init() {
 	chosen = [];
 	matches = 0;
 	chosen = []
 	timerLeft = 60
-	timer = setInterval(updateTimer, 1000);
-	updateTimer()
-	document.getElementById('startButton').style.display = 'none';
 }
 
 function flipped(cardContainer) {
@@ -86,33 +86,16 @@ function flipped(cardContainer) {
 
 function gameOver(){
 	clearInterval(timer)
-	document.getElementById('startButton').style.display = 'block';
+	document.getElementById('start-button').style.display = 'block';
 }
 
 function updateTimer(){
 	timerLeft = timerLeft-1
 	if(timerLeft >=0)
-	document.getElementById('timer').innerHTML = timeLeft
+	document.getElementById('timer').innerHTML = `${timerLeft} seconds remaining`
+	else
 	gameOver()
 }
-
-// function checkIfMatch(){
-//     if (firstCard (need to access source image and compare) === secondCard){
-//         keep cards flipped
-//         and make them unclickable
-//     }
-//     else{
-//         flip cards back (similar to flipped but backwards)
-//         make sure theres a time lapse (timeOut)
-//     }
-// }
-
-// function checkIfMatch(){
-// //     if(cardEls.getElementByTagName('img').src === cardEls.getElementByTagName('img').src){
-
-// //     }
-
-// }
 
 (function shuffle() {
 	cards.forEach((card) => {
@@ -123,19 +106,3 @@ function updateTimer(){
 
 //to do startTimer
 
-// function render(){
-// 	const flippedEls = document.querySelectorAll('.flipped:not(.matched)')
-// 	if(flippedEls.length ===2){
-// 		setTimeout(() => {
-// 			flippedEls.forEach(card => {
-// 				card.style.transform = 'rotateY(0deg)'
-// 				card.classList.remove('flipped')
-// 			})
-// 		}, 1000)
-// 	}
-// }
-
-// card1.style.transform = 'rotateY(0deg)'
-// card1.classList.remove('flipped')
-// card2.style.transform = 'rotateY(0deg)'
-// card.classList.remove('flipped')
