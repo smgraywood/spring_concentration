@@ -5,104 +5,74 @@ const cards = document.querySelectorAll(".flip-card");
 const startButton = document.querySelector("#start-button");
 const cardNumberSelector = document.getElementById("select-cards-number");
 const statusMessage = document.querySelector("#status-message");
+const timeLeft = document.getElementById("timer")
+
 
 /*----- state variables -----*/
 let chosen;
 let matches;
-let time;
+let timer;
+let timerLeft;
 let card1;
 let card2;
 
 /*----- cached elements  -----*/
 
 /*----- event listeners -----*/
-// startButton.addEventListener("click", init)
 
-cardsContainerEl.addEventListener("click", flipped);
+cardsContainerEl.addEventListener("click", flipCard);
 
-cardNumberSelector.addEventListener("change", function () {
-	if (this.getAttribute("name") === "count") {
-		const number = parseInt(this.value);
-		const gameBoardBoxes = document.querySelectorAll(".gameBoardBox");
-		for (let i = 0; i < gameBoardBoxes.length; i++) {
-			if (i < number) {
-				gameBoardBoxes[i].style.display = "block";
-			} else {
-				gameBoardBoxes[i].style.display = "none";
-			}
-		}
-	}
-});
+startButton.addEventListener("click", init)
 
 /*----- functions -----*/
 
+
+function flipCard(evt){
+	const cardContainer = evt.target.closest('.flip-card-inner')
+	cardContainer.style.transform = 'rotateY(180deg)'
+	flipped(cardContainer)
+}
+
+
+
 init();
 
-function init() {
+function init(evt) {
 	chosen = [];
 	matches = 0;
-	// render()
+	chosen = []
+	timerLeft = 60
+	timer = setInterval(updateTimer, 1000);
+	updateTimer()
+	document.getElementById('startButton').style.display = 'none';
 }
-// function init(evt){
-//     evt.target.startTimer()
-// }
 
-// function startTimer(){
-//     console.log("clicked")
-// }
-
-function flipped(evt) {
-	const card = evt.target.closest(".flip-card-inner");
-	card.style.transform = "rotateY(180deg)";
-	if (!card.classList.contains("matched")) {
-		card.classList.toggle("flipped");
+function flipped(cardContainer) {
+	const card = cardContainer;
+	if (chosen.length === 0){
+		card1=card
 	}
-	chosen.push(card.dataset.id);
+	else if(chosen.length === 1){
+		card2=card
+	}
+	chosen.push(card.dataset.id)
 
-	// console.log(matches);
-	// console.log(chosen);
 	if (chosen.length === 2) {
-		matches = chosen.every((id) => id === chosen[0])
-			? ++matches
-			: matches + 0;
 		if (chosen[0] === chosen[1]) {
-			// freeze cards/make them unclickable
-			card1 = card.classList.add("matched");
-			card2 = card.classList.add("matched");
+			matches++
 			chosen = [];
 		} else {
+			chosen = []
+			const cardsToFlip = [card1, card2]
 			setTimeout(() => {
-				// console.log("the time is now.");
-				//flip back over
-				const cardOne = document.querySelector(
-					`[data-id="${chosen[0]}"]`
-				);
-				// const card2 = document.querySelector(`[data-id="${chosen[1]}"]`);
-				console.log("cardOne:", cardOne);
-				// console.log("card2:", card2);
-				// console.log(chosen[0])
-				cardOne.style.transform = "rotateY(0deg)";
-				cardOne.classList.toggle("flipped")
-				// card2.style.transform = "rotateY(0deg)";
-
-				// console.log("the time is now.");
-				//flip back over
-				// const card1 = document.querySelector(`[data-id="${chosen[0]}"]`);
-				const cardTwo = document.querySelector(
-					`[data-id="${chosen[1]}"]`
-				);
-				// console.log("card1:", card1);
-				console.log("cardTwo:", cardTwo);
-				// console.log(chosen[0])
-				// card1.style.transform = "rotateY(0deg)";
-				cardTwo.style.transform = "rotateY(0deg)";
-				cardTwo.classList.toggle("flipped")
-				chosen = [];
-			}, 3000);
+				cardsToFlip.forEach((card) => {
+					card.style.transform = 'rotateY(0deg)'
+				})
+			}, 1000);
 		}
 	}
 
-	if (matches === 12) {
+	if (matches === 12 && time > 0) {
 		statusMessage.textContent = "You won!";
 		//enable start button
 	}
@@ -112,6 +82,18 @@ function flipped(evt) {
 
 	// }
 	// render()
+}
+
+function gameOver(){
+	clearInterval(timer)
+	document.getElementById('startButton').style.display = 'block';
+}
+
+function updateTimer(){
+	timerLeft = timerLeft-1
+	if(timerLeft >=0)
+	document.getElementById('timer').innerHTML = timeLeft
+	gameOver()
 }
 
 // function checkIfMatch(){
