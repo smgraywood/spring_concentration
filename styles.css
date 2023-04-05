@@ -126,9 +126,13 @@ img {
 	margin: 0 auto;
 	flex-direction: column;
 	margin-top: -7vmin;
+	width: 15%;
 }
-
-#gameBoard{
+#gameBoard {
+	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(6, 20vmin);
+	margin-top: -1vmin;
 	pointer-events: none;
 }
 
@@ -178,13 +182,6 @@ img {
     object-fit: cover;
 }
 
-#gameBoard {
-	justify-content: center;
-	display: grid;
-	grid-template-columns: repeat(6, 20vmin);
-	margin-top: -1vmin;
-}
-
 .gameBoardBox {
 	position: relative;
 	display: flex;
@@ -206,6 +203,58 @@ img {
 .matched{
 	transform: rotateY(180deg);
 	pointer-events:none;
+}
+
+@media only screen and (max-width: 800px){
+
+	#title1{
+		font-size: 10vmin;
+		margin-top: -2vmin;
+	}
+
+	#title2 {
+		font-size: 7vmin;
+		margin-top: 1%;
+		margin-bottom: 5vmin;
+	}
+
+	label {
+		font-size: 3vmin;
+		text-align: center;
+	}
+
+	select {
+		font-size: 3vmin;
+		width: 15vmin;
+		height: 7vmin;
+	}
+
+	button {
+		width: 30vmin;
+		height:16vmin;
+		font-size: 6vmin;
+	}
+
+	#timer-div{
+		font-size: 4vmin;
+		height: 5vmin;
+	}
+
+	#gameBoard{
+		display: grid;
+		grid-template-columns: repeat(4, 20vmin);
+		gap: 3%;
+	}
+
+	.gameBoardBox {
+		height: 20vmin;
+		width: 20vmin;
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		margin: auto 0;
+	}
+
 }
 
 /* 
