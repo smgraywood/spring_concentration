@@ -7,16 +7,16 @@ body {
 
 #title1 {
 	font-family: "Glass Antiqua", cursive;
-	color: #ee85a5;
+	color: #F8879C;
 	font-size: 6vmin;
 	text-align: center;
 }
 
 #title2 {
 	font-family: "Ibarra Real Nova", serif;
-	color: #febed5;
+	color: #FFD0D0;
 	-webkit-text-stroke-width: 0.25vmin;
-	-webkit-text-stroke-color: #ee85a5;
+	-webkit-text-stroke-color: #F8879C;
 	font-size: 8vmin;
 	text-align: center;
 	margin-top: -2vmin;
@@ -34,6 +34,7 @@ body {
 	border: solid 3px black;
 	opacity: 0.8;
     width: 20vmin;
+	margin-top: -5vmin
 }
 
 label {
@@ -85,7 +86,7 @@ button {
 
 button:hover {
 	opacity: 1;
-	box-shadow: 0px 0.5vmin #ef7c9a;
+	box-shadow: 0px 0.5vmin #F8879C;
 }
 
 #timer-div{
@@ -104,12 +105,12 @@ button:hover {
 }
 
 #status-message{
-	color: #ef7c9a;
+	color: #F8879C;
 	font-size: 10vmin;
 	text-align: center;
 	text-transform:uppercase;
-	-webkit-text-stroke-width: 0.25vmin;
-	-webkit-text-stroke-color:#febed5;
+	-webkit-text-stroke-width: 0.5vmin;
+	-webkit-text-stroke-color:#FFD0D0;
 }
 
 img {
@@ -117,6 +118,19 @@ img {
 	width: 15vmin;
 }
 
+#rose-gif{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	flex-direction: column;
+	margin-top: -7vmin;
+}
+
+#gameBoard{
+	pointer-events: none;
+}
 
 .flip-card {
 	background-color: transparent;
@@ -181,12 +195,12 @@ img {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	background-color: #febed5;
+	background-color: #FFD0D0;
 	border-radius: 10vmin;
 }
 
 .gameBoardBox:hover {
-	box-shadow: 0px 0.5vmin #ef7c9a;
+	box-shadow: 0px 0.5vmin #F8879C;
 }
 
 .matched{
