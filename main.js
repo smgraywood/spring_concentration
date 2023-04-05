@@ -59,22 +59,49 @@ function flipped(evt) {
 	}
 	chosen.push(card.dataset.id);
 
-	console.log(matches);
-	console.log(chosen);
+	// console.log(matches);
+	// console.log(chosen);
 	if (chosen.length === 2) {
 		matches = chosen.every((id) => id === chosen[0])
 			? ++matches
 			: matches + 0;
+		if (chosen[0] === chosen[1]) {
+			// freeze cards/make them unclickable
+			card1 = card.classList.add("matched");
+			card2 = card.classList.add("matched");
+			chosen = [];
+		} else {
+			setTimeout(() => {
+				// console.log("the time is now.");
+				//flip back over
+				const cardOne = document.querySelector(
+					`[data-id="${chosen[0]}"]`
+				);
+				// const card2 = document.querySelector(`[data-id="${chosen[1]}"]`);
+				console.log("cardOne:", cardOne);
+				// console.log("card2:", card2);
+				// console.log(chosen[0])
+				cardOne.style.transform = "rotateY(0deg)";
+				cardOne.classList.toggle("flipped")
+				// card2.style.transform = "rotateY(0deg)";
+
+				// console.log("the time is now.");
+				//flip back over
+				// const card1 = document.querySelector(`[data-id="${chosen[0]}"]`);
+				const cardTwo = document.querySelector(
+					`[data-id="${chosen[1]}"]`
+				);
+				// console.log("card1:", card1);
+				console.log("cardTwo:", cardTwo);
+				// console.log(chosen[0])
+				// card1.style.transform = "rotateY(0deg)";
+				cardTwo.style.transform = "rotateY(0deg)";
+				cardTwo.classList.toggle("flipped")
+				chosen = [];
+			}, 3000);
+		}
 	}
-	if (chosen[0] === chosen[1]) {
-		card1 = card.classList.add("matched");
-		card2 = card.classList.add("matched");
-		chosen = [];
-		// freeze cards/make them unclickable
-	}
-	// if(chosen[0] != chosen[1]){
-	// 	card.dataset.id = style.transform = "rotateY(-180deg)";
-	// }
+
 	if (matches === 12) {
 		statusMessage.textContent = "You won!";
 		//enable start button
@@ -125,3 +152,8 @@ function flipped(evt) {
 // 		}, 1000)
 // 	}
 // }
+
+// card1.style.transform = 'rotateY(0deg)'
+// card1.classList.remove('flipped')
+// card2.style.transform = 'rotateY(0deg)'
+// card.classList.remove('flipped')
