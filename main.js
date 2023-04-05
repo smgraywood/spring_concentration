@@ -48,6 +48,7 @@ function flipCard(evt) {
 	flipped(cardContainer);
 }
 function startGame() {
+	resetBoard()
 	gameBoard.style.pointerEvents = "auto";
 	cardNumberSelector.style.pointerEvents = "none";
 	startButton.style.pointerEvents = "none";
