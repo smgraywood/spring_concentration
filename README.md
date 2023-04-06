@@ -23,8 +23,8 @@ A spring flower themed game of concentration.
 * planned with ![Figma](https://www.figma.com/file/5XNCj2WvwdM3QgI3AMKYlt/SPRING-CONCENTRATION?node-id=0-1&t=PYmLbOoPQuW83ZPu-0)
 
 
-<img src="images/readme_images/flowers_hidden">
-<img src="images/readme_images/flowers_exposed">
+<img src="images/readme_images/flowers_hidden.png">
+<img src="images/readme_images/flowers_exposed.png">
 
 ### Built With
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
