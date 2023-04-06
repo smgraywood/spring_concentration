@@ -25,10 +25,10 @@ A spring flower themed game of concentration.
 
 <img src="images/readme_images/flowers_hidden.png">
 <img src="images/readme_images/flowers_exposed.png">
+<br> 
+<br>
+<img src="images/readme_images/gameplay_gif.gif">
 
-<video>
-  <source src="images/readme_images/loss_screengrab.mp4" type="video/mp4">
-</video>
 
 <video>
   <source src="images/readme_images/loss_screengrab.mp4" type="video/mp4">
