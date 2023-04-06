@@ -43,7 +43,6 @@ cardNumberSelector.addEventListener("change", function () {
 			//otherwise hide the gameboard boxes that have not been selected, and make them unclickable
 			} else {
 				gameBoardBoxes[i].style.display = "none";
-				gameBoardBoxes[i].style.pointerEvents = "none";
 				
 			}
 		}
@@ -54,12 +53,17 @@ cardNumberSelector.addEventListener("change", function () {
 
 //function to flip cards
 function flipCard(evt) {
+	//if the div is not displayed, just return and don't flip the card
+	if(evt.target.style.display === ""){
+		return
+	}
 	//value to hold clicked element on the cards
 	const cardContainer = evt.target.closest(".flip-card-inner");
 	//turning over the cards
 	cardContainer.style.transform = "rotateY(180deg)";
 	//calling the function with the clicked card passed in
 	flipped(cardContainer);
+	
 }
 
 //function to start the game
