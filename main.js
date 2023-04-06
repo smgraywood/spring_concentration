@@ -91,6 +91,14 @@ function init() {
 	matches = 0;
 	//initializing the time left in the timer
 	timerLeft = 60;
+	//shuffle board upon start of game
+	(function shuffle() {
+		//for each of the cards randomize the position on the game board
+		cards.forEach((card) => {
+			let ramdomPos = Math.floor(Math.random() * 24);
+			card.style.order = ramdomPos;
+		});
+	})();
 }
 
 //function to create the flipping action on cards or not based on whether or not they're a match
