@@ -27,11 +27,11 @@ A spring flower themed game of concentration.
 <img src="images/readme_images/flowers_exposed.png">
 
 <video width="320" height="240" controls>
-  <source src="images/readme_images/win_screengrab.mp4" type="video/mp4">
+  <source src="win_screengrab.mp4" type="video/mp4">
 </video>
 
 <video width="320" height="240" controls>
-  <source src="images/readme_images/loss_screengrab.mp4" type="video/mp4">
+  <source src="loss_screengrab.mp4" type="video/mp4">
 </video>
 
 ### Built With
