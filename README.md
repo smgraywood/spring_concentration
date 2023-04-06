@@ -27,12 +27,8 @@ A spring flower themed game of concentration.
 <img src="images/readme_images/flowers_exposed.png">
 <br> 
 <br>
-<img src="images/readme_images/gameplay_gif.gif">
+<img src="images/readme_images/gameplay_gif.gif" width='300px'>
 
-
-<video>
-  <source src="images/readme_images/loss_screengrab.mp4" type="video/mp4">
-</video>
 
 ### Built With
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
