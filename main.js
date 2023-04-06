@@ -150,15 +150,23 @@ function checkWin() {
 
 //function to check if time is at 0 and player has not finished matching
 function checkLoss() {
+	//display start button
 	document.getElementById("start-button").style.display = "block";
-
+	//variable to hold the value of the chosen board size
 	const boardSize = parseInt(cardNumberSelector.value);
+	//variable to hold the total number of matches needed to win
 	const totalPairs = boardSize / 2;
+	//if the time left is at 0 and the number of matches made is not the same as the number of matches needed to win go through loss logic
 	if (timerLeft === 0 && matches !== totalPairs) {
+		//display a message saying the player lost
 		statusMessage.textContent = "You lost.";
+		//reenable the start button
 		startButton.style.pointerEvents = "auto";
+		//disable the ability to click on the board
 		gameBoard.style.pointerEvents = "none";
+		//reenable the ability to choose board size
 		cardNumberSelector.style.pointerEvents = "auto";
+		//pause the timer at current time
 		clearInterval(timer)
 	}
 }
