@@ -1,10 +1,10 @@
 
 
-
+<!-- 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues][issues-shield]][issues-url] -->
 
 
 # spring concentration
@@ -13,7 +13,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="images/readme_images/product_name.gif">
+<img src="images/readme_images/product_name.png">
 
 A spring flower themed game of concentration.
 
