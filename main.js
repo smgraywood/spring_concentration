@@ -53,7 +53,7 @@ cardNumberSelector.addEventListener("change", function () {
 
 //function to flip cards
 function flipCard(evt) {
-	//if the div is not displayed, just return and don't flip the card
+	//if the display of a card is disabled, do not do anything when it's clicked.
 	if(evt.target.style.display === ""){
 		return
 	}
