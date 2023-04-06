@@ -17,6 +17,8 @@ let timer;
 let timerLeft;
 let card1;
 let card2;
+let boardSize;
+
 
 /*----- cached elements  -----*/
 
@@ -30,7 +32,13 @@ startButton.addEventListener("click", startGame);
 
 //event listener on card selector to trigger hiding of some divs based on board size selected by player
 cardNumberSelector.addEventListener("change", function () {
-	if (this.getAttribute("name") === "count") {
+	//establishing the boardSize value as a number
+	boardSize = parseInt(cardNumberSelector.value);
+	//if the boardSize value matches any of the sizes available, then allow the start button to be clicked and go through the following if statement
+	if(boardSize === 4 || boardSize === 8 || boardSize === 12 || boardSize === 16 || boardSize === 20 || boardSize === 24){
+		//enable start button
+		startButton.style.pointerEvents = "auto";
+		if (this.getAttribute("name") === "count") {
 		//establishing variable to hold the value of the board size
 		const number = parseInt(this.value);
 		//value to hold the dom element of the game board boxes
@@ -46,10 +54,15 @@ cardNumberSelector.addEventListener("change", function () {
 				
 			}
 		}
+
+	}	
 	}
+
+
 });
 
 /*----- functions -----*/
+init()
 
 //function to flip cards
 function flipCard(evt) {
@@ -90,6 +103,7 @@ function startGame() {
 
 //function to initialize the values for the chosen number of cards, the number of matches and the time left in the timer
 function init() {
+	startButton.style.pointerEvents = "none";
 	//initializing the array to hold the number of cards clicked on to an empty array
 	chosen = [];
 	//initializing the number of matches to 0
@@ -104,7 +118,7 @@ function init() {
 			card.style.order = ramdomPos;
 		});
 	})();
-}
+	}
 
 //function to create the flipping action on cards or not based on whether or not they're a match
 function flipped(cardContainer) {
