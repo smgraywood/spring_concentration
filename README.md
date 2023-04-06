@@ -24,6 +24,16 @@ A spring flower themed game of concentration.
 <img src="images/readme_images/flowers_exposed.png">
 <br> 
 <br>
+<div class="row" display="flex">
+  <div class="column" flex="33.33%" padding="5px">
+    <img src="images/readme_images/mobile_screenshot1.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column" flex="33.33%" padding="5px">
+    <img src="images/readme_images/mobile_screenshot2.png" alt="Forest" style="width:100%">
+  </div>
+
+<br>
+<br>
 <img src="images/readme_images/gameplay_gif.gif" width="500px">
 
 

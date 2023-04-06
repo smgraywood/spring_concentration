@@ -44,6 +44,7 @@ cardNumberSelector.addEventListener("change", function () {
 			} else {
 				gameBoardBoxes[i].style.display = "none";
 				gameBoardBoxes[i].style.pointerEvents = "none";
+				
 			}
 		}
 	}
