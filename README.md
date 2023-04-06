@@ -15,6 +15,7 @@ A spring flower themed game of concentration.
 
 * choose board sizes between 4 and 24 tiles
 * beautiful spring flowers under each tile
+* mobile responsive design
 * timer function counting down while game play happens
 * planned with [Figma](https://www.figma.com/file/5XNCj2WvwdM3QgI3AMKYlt/SPRING-CONCENTRATION?node-id=0-1&t=PYmLbOoPQuW83ZPu-0)
 
