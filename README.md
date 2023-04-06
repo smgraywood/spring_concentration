@@ -1,6 +1,4 @@
-
-Go Play!
-[github.io](https://smgraywood.github.io/spring_concentration/)
+# Go Play! [github.io](https://smgraywood.github.io/spring_concentration/)
 
 
 <!-- TABLE OF CONTENTS -->
@@ -25,8 +23,8 @@ Go Play!
 
 
 
-# spring concentration
-<img src="images/readme_images/flowers.gif" width="300px">
+# SPRING CONCENTRATION
+<img width="250px" src="images/readme_images/flowers.gif">
 
 
 <!-- ABOUT THE PROJECT -->
