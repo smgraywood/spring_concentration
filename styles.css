@@ -246,7 +246,16 @@ img {
 
 	#timer-div{
 		font-size: 4vmin;
-		height: 5vmin;
+		height: 7vmin;
+	}
+
+	span{
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	#gameBoard{
