@@ -1,12 +1,4 @@
 
-
-<!-- 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url] -->
-
-
 Go Play!
 [github.io](https://smgraywood.github.io/spring_concentration/)
 
