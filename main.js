@@ -1,4 +1,5 @@
 /*----- constants -----*/
+
 const cardEls = document.querySelectorAll(".flip-card-inner");
 const cardsContainerEl = document.querySelector("#gameBoard");
 const cards = document.querySelectorAll(".flip-card");
@@ -9,6 +10,7 @@ const timeLeft = document.getElementById("timer");
 const timerDiv = document.getElementById("timer-div");
 
 /*----- state variables -----*/
+
 let chosen;
 let matches;
 let timer;
@@ -20,17 +22,25 @@ let card2;
 
 /*----- event listeners -----*/
 
+//event listener to trigger flipping of card
 cardsContainerEl.addEventListener("click", flipCard);
 
+//event listener to trigger start of game
 startButton.addEventListener("click", startGame);
 
+//event listener on card selector to trigger hiding of some divs based on board size selected by player
 cardNumberSelector.addEventListener("change", function () {
 	if (this.getAttribute("name") === "count") {
+		//establishing variable to hold the value of the board size
 		const number = parseInt(this.value);
+		//value to hold the dom element of the game board boxes
 		const gameBoardBoxes = document.querySelectorAll(".gameBoardBox");
+		//looping over the length of the game board boxes array
 		for (let i = 0; i < gameBoardBoxes.length; i++) {
+			//if the number has not yet been selected/is at 24 display all boxes
 			if (i < number) {
 				gameBoardBoxes[i].style.display = "block";
+			//otherwise hide the gameboard boxes that have not been selected, and make them unclickable
 			} else {
 				gameBoardBoxes[i].style.display = "none";
 				gameBoardBoxes[i].style.pointerEvents = "none";
@@ -41,11 +51,19 @@ cardNumberSelector.addEventListener("change", function () {
 
 /*----- functions -----*/
 
+//function to flip cards
 function flipCard(evt) {
+	//value to hold clicked element on the cards
 	const cardContainer = evt.target.closest(".flip-card-inner");
+	//turning over the cards
 	cardContainer.style.transform = "rotateY(180deg)";
+	//calling the function with the clicked card passed in
 	flipped(cardContainer);
 }
+
+//function to start the game
+//(i.e. reset the board, reenable the game board pointer events, disable the board size selector
+//disable the start button, initialize the necessary values, show the timer, and start the timer)
 function startGame() {
 	resetBoard()
 	gameBoard.style.pointerEvents = "auto";
@@ -57,13 +75,14 @@ function startGame() {
 	updateTimer();
 }
 
+//function to initialize the values for the chosen number of cards, the number of matches and the time left in the timer
 function init() {
 	chosen = [];
 	matches = 0;
-	chosen = [];
 	timerLeft = 60;
 }
 
+//function to create the flipping action on cards or not based on whether or not they're a match
 function flipped(cardContainer) {
 	const card = cardContainer;
 	if (chosen.length === 0) {
@@ -90,6 +109,7 @@ function flipped(cardContainer) {
 	}
 }
 
+//function to check if a player has matched all cards and therefor won
 function checkWin() {
 	const boardSize = parseInt(cardNumberSelector.value);
 	console.log("boardSize:", boardSize);
@@ -103,6 +123,7 @@ function checkWin() {
 	}
 }
 
+//function to check if time is at 0 and player has not finished matching
 function checkLoss() {
 	document.getElementById("start-button").style.display = "block";
 
@@ -117,6 +138,7 @@ function checkLoss() {
 	}
 }
 
+//function to update the timer as the seconds count down
 function updateTimer() {
 	timerLeft = timerLeft - 1;
 	if (timerLeft >= 0) {
@@ -127,6 +149,7 @@ function updateTimer() {
 	checkLoss();
 }
 
+//function to reset the board
 function resetBoard() {
 	chosen = [];
 	matches = 0;
@@ -140,6 +163,7 @@ function resetBoard() {
 	timerDiv.style.display = "none";
 }
 
+//function to shuffle the board upon reload of page
 (function shuffle() {
 	cards.forEach((card) => {
 		let ramdomPos = Math.floor(Math.random() * 24);
