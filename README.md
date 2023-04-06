@@ -24,12 +24,12 @@ A spring flower themed game of concentration.
 <img src="images/readme_images/flowers_exposed.png">
 <br> 
 <br>
-<div class="row" display="flex">
-  <div class="column" flex="33.33%" padding="5px">
-    <img src="images/readme_images/mobile_screenshot1.png" alt="Snow" style="width:100%">
+<div class="row" style = "display: flex">
+  <div class="column" style="flex: 33.33% padding: 5px">
+    <img src="images/readme_images/mobile_screenshot1.png" alt="in play mobile responsive screen" style="width:100%">
   </div>
-  <div class="column" flex="33.33%" padding="5px">
-    <img src="images/readme_images/mobile_screenshot2.png" alt="Forest" style="width:100%">
+  <div class="column" style="flex: 33.33% padding: 5px">
+    <img src="images/readme_images/mobile_screenshot2.png" alt="winning mobile responsive screen" style="width:100%">
   </div>
 
 <br>
