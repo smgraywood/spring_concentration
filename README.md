@@ -27,7 +27,7 @@ A spring flower themed game of concentration.
 <img src="images/readme_images/flowers_exposed.png">
 <br> 
 <br>
-<img src="images/readme_images/gameplay_gif.gif" width='300px'>
+<img src="images/readme_images/gameplay_gif.gif" width="500px">
 
 
 ### Built With
