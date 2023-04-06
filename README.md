@@ -101,5 +101,6 @@ Don't forget to give the project a star! Thanks again!
 - [ ] when flowers are matched, a short message about the genus of the flower and where and when it grows
 - [ ] differing time amounts allowed for different board sizes
 - [ ] leaderboard for shortest time making all matches based on board size
+- [ ] popup to tell the player that they need to select a board size if they try to click the start button without selecting a board size
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

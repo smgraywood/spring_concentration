@@ -103,6 +103,7 @@ function startGame() {
 
 //function to initialize the values for the chosen number of cards, the number of matches and the time left in the timer
 function init() {
+	//disable start button until player selects a game board size
 	startButton.style.pointerEvents = "none";
 	//initializing the array to hold the number of cards clicked on to an empty array
 	chosen = [];
