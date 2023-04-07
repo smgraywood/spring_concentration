@@ -44,6 +44,7 @@ label {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	text-align: center;
 	padding: 2vmin;
 	font-family: "Glass Antiqua", cursive;
 }
