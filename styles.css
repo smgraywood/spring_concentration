@@ -7,16 +7,16 @@ body {
 
 #title1 {
 	font-family: "Glass Antiqua", cursive;
-	color: #F8879C;
+	color: #f8879c;
 	font-size: 6vmin;
 	text-align: center;
 }
 
 #title2 {
 	font-family: "Ibarra Real Nova", serif;
-	color: #FFD0D0;
+	color: #ffd0d0;
 	-webkit-text-stroke-width: 0.25vmin;
-	-webkit-text-stroke-color: #F8879C;
+	-webkit-text-stroke-color: #f8879c;
 	font-size: 8vmin;
 	text-align: center;
 	margin-top: -2vmin;
@@ -27,14 +27,14 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    margin: 0 auto;
+	margin: 0 auto;
 	flex-direction: column;
 	background-color: #f4f0e7;
 	border-radius: 25px;
 	border: solid 3px black;
 	opacity: 0.8;
-    width: 20vmin;
-	margin-top: -5vmin
+	width: 20vmin;
+	margin-top: -5vmin;
 }
 
 label {
@@ -72,7 +72,6 @@ select {
 	justify-content: center;
 	flex-direction: column;
 	margin-bottom: 1vmin;
-	
 }
 
 button {
@@ -87,34 +86,34 @@ button {
 
 button:hover {
 	opacity: 1;
-	box-shadow: 0px 0.5vmin #F8879C;
+	box-shadow: 0px 0.5vmin #f8879c;
 }
 
-#timer-div{
-	display:none;
+#timer-div {
+	display: none;
 	position: relative;
 	align-items: center;
 	justify-content: center;
-    margin: 0 auto;
+	margin: 0 auto;
 	flex-direction: column;
 	background-color: #f4f0e7;
 	border-radius: 25px;
 	border: solid 3px black;
 	opacity: 0.8;
-    width: 40vmin;
-	padding: 3vmin
+	width: 40vmin;
+	padding: 3vmin;
 }
 
-#status-message{
-	color: #F8879C;
+#status-message {
+	color: #f8879c;
 	font-size: 10vmin;
 	text-align: center;
-	text-transform:uppercase;
+	text-transform: uppercase;
 	-webkit-text-stroke-width: 0.5vmin;
-	-webkit-text-stroke-color:#FFD0D0;
+	-webkit-text-stroke-color: #ffd0d0;
 }
 
-span{
+span {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -128,7 +127,7 @@ img {
 	width: 15vmin;
 }
 
-#rose-gif{
+#rose-gif {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -151,7 +150,7 @@ img {
 	height: 20vmin;
 	width: 20vmin;
 	perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    display: inline-block;
+	display: inline-block;
 }
 
 /* .flip-card-inner:hover {
@@ -187,9 +186,9 @@ img {
 }
 
 .flip-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .gameBoardBox {
@@ -202,22 +201,21 @@ img {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	background-color: #FFD0D0;
+	background-color: #ffd0d0;
 	border-radius: 10vmin;
 }
 
 .gameBoardBox:hover {
-	box-shadow: 0px 0.5vmin #F8879C;
+	box-shadow: 0px 0.5vmin #f8879c;
 }
 
-.matched{
+.matched {
 	transform: rotateY(180deg);
-	pointer-events:none;
+	pointer-events: none;
 }
 
-@media only screen and (max-width: 1500px){
-
-	#title1{
+@media only screen and (max-width: 1500px) {
+	#title1 {
 		font-size: 10vmin;
 		margin-top: -2vmin;
 	}
@@ -241,16 +239,16 @@ img {
 
 	button {
 		width: 30vmin;
-		height:16vmin;
+		height: 16vmin;
 		font-size: 6vmin;
 	}
 
-	#timer-div{
+	#timer-div {
 		font-size: 4vmin;
 		height: 9vmin;
 	}
 
-	span{
+	span {
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -259,7 +257,7 @@ img {
 		text-align: center;
 	}
 
-	#gameBoard{
+	#gameBoard {
 		display: grid;
 		grid-template-columns: repeat(4, 20vmin);
 		gap: 3%;
@@ -273,6 +271,4 @@ img {
 		justify-content: center;
 		margin: auto 0;
 	}
-
 }
-

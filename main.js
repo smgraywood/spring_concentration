@@ -19,7 +19,6 @@ let card1;
 let card2;
 let boardSize;
 
-
 /*----- cached elements  -----*/
 
 /*----- event listeners -----*/
@@ -35,40 +34,43 @@ cardNumberSelector.addEventListener("change", function () {
 	//establishing the boardSize value as a number
 	boardSize = parseInt(cardNumberSelector.value);
 	//if the boardSize value matches any of the sizes available, then allow the start button to be clicked and go through the following if statement
-	if(boardSize === 4 || boardSize === 8 || boardSize === 12 || boardSize === 16 || boardSize === 20 || boardSize === 24){
+	if (
+		boardSize === 4 ||
+		boardSize === 8 ||
+		boardSize === 12 ||
+		boardSize === 16 ||
+		boardSize === 20 ||
+		boardSize === 24
+	) {
 		//enable start button
 		startButton.style.pointerEvents = "auto";
 		if (this.getAttribute("name") === "count") {
-		//establishing variable to hold the value of the board size
-		const number = parseInt(this.value);
-		//value to hold the dom element of the game board boxes
-		const gameBoardBoxes = document.querySelectorAll(".gameBoardBox");
-		//looping over the length of the game board boxes array
-		for (let i = 0; i < gameBoardBoxes.length; i++) {
-			//if the number has not yet been selected/is at 24 display all boxes
-			if (i < number) {
-				gameBoardBoxes[i].style.display = "block";
-			//otherwise hide the gameboard boxes that have not been selected, and make them unclickable
-			} else {
-				gameBoardBoxes[i].style.display = "none";
-				
+			//establishing variable to hold the value of the board size
+			const number = parseInt(this.value);
+			//value to hold the dom element of the game board boxes
+			const gameBoardBoxes = document.querySelectorAll(".gameBoardBox");
+			//looping over the length of the game board boxes array
+			for (let i = 0; i < gameBoardBoxes.length; i++) {
+				//if the number has not yet been selected/is at 24 display all boxes
+				if (i < number) {
+					gameBoardBoxes[i].style.display = "block";
+					//otherwise hide the gameboard boxes that have not been selected, and make them unclickable
+				} else {
+					gameBoardBoxes[i].style.display = "none";
+				}
 			}
 		}
-
-	}	
 	}
-
-
 });
 
 /*----- functions -----*/
-init()
+init();
 
 //function to flip cards
 function flipCard(evt) {
 	//if the display of a card is disabled, do not do anything when it's clicked.
-	if(evt.target.style.display === ""){
-		return
+	if (evt.target.style.display === "") {
+		return;
 	}
 	//value to hold clicked element on the cards
 	const cardContainer = evt.target.closest(".flip-card-inner");
@@ -76,7 +78,6 @@ function flipCard(evt) {
 	cardContainer.style.transform = "rotateY(180deg)";
 	//calling the function with the clicked card passed in
 	flipped(cardContainer);
-	
 }
 
 //function to start the game
@@ -84,7 +85,7 @@ function flipCard(evt) {
 //disable the start button, initialize the necessary values, show the timer, and start the timer)
 function startGame() {
 	//resetting the board to its original state
-	resetBoard()
+	resetBoard();
 	//enabling clicks on the game board
 	gameBoard.style.pointerEvents = "auto";
 	//disabling clicks on the board size selector dropdown
@@ -119,7 +120,7 @@ function init() {
 			card.style.order = ramdomPos;
 		});
 	})();
-	}
+}
 
 //function to create the flipping action on cards or not based on whether or not they're a match
 function flipped(cardContainer) {
@@ -128,7 +129,7 @@ function flipped(cardContainer) {
 	//if there are no cards chosen let the first card equal the parameter value
 	if (chosen.length === 0) {
 		card1 = card;
-	//else if there is one card chosen let the second card chosen equal the parameter value
+		//else if there is one card chosen let the second card chosen equal the parameter value
 	} else if (chosen.length === 1) {
 		card2 = card;
 	}
@@ -142,7 +143,7 @@ function flipped(cardContainer) {
 			matches++;
 			chosen = [];
 			checkWin();
-		//otherwise reset the chosen array and flip the cards back over after 1 second
+			//otherwise reset the chosen array and flip the cards back over after 1 second
 		} else {
 			chosen = [];
 			const cardsToFlip = [card1, card2];
@@ -195,7 +196,7 @@ function checkLoss() {
 		//reenable the ability to choose board size
 		cardNumberSelector.style.pointerEvents = "auto";
 		//pause the timer at current time
-		clearInterval(timer)
+		clearInterval(timer);
 	}
 }
 
