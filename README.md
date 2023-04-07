@@ -32,7 +32,9 @@
 
 <img src="images/readme_images/product_name.png">
 
-A spring flower themed game of concentration.
+A spring flower themed game of concentration inspired by my mother. 
+My mother loves plants and flowers and used to take me on botany identification walks as a child.
+So, for my first game created for the General Assembly SEI program, I decided to make a game that she would love as much as the superbloom.
 
 * choose board sizes between 4 and 24 tiles
 * beautiful spring flowers under each tile
