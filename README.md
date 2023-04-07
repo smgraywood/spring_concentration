@@ -60,20 +60,23 @@ The user can then navigate through the game by clicking different tiles. If the 
 If the user matches all of the tiles within the given time, a message displays at the top of the page telling them that they won. However if the user is unable to make all of the matches in time, the message displayed says "You Lost." 
 
 Feel free to go test it out!
-# Go Play! [github.io](https://smgraywood.github.io/spring_concentration/)
+[github.io](https://smgraywood.github.io/spring_concentration/)
 
 These are images from the design process of the game
+<br>
 <img src="images/readme_images/flowers_hidden.png" alt="image of the design for the game with the front of the pink tiles showing">
 <img src="images/readme_images/flowers_exposed.png" alt="image of the design for the game with the back of the pink tiles showing, exposing the side adorned with a flower">
 <br> 
 <br>
 This is an example of what the game looks like on mobile
+<br>
 <img src="images/readme_images/mobile_screenshot1.png" alt="in play mobile responsive screen" style="width: 50%;">
 
 
 <br>
 <br>
 This is a short video of what gameplay might look like
+<br>
 <img src="images/readme_images/gameplay_gif.gif" width="500px" alt="a short gif of what gameplay looks like">
 
 
