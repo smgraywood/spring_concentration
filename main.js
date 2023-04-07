@@ -73,6 +73,9 @@ function flipCard(evt) {
 		card1 = evt.target.closest(".flip-card-inner") 
 		console.log(card1)
 	}
+	// if(card1 === evt.target.closest(".flip-card-inner")){
+	// 	return
+	// }
 	else{
 		card2 = evt.target.closest(".flip-card-inner")
 	}
