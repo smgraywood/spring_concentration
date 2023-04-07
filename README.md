@@ -73,7 +73,7 @@ These are images from the design process of the game
 <br>
 This is an example of what the game looks like on mobile
 <br>
-<img src="images/readme_images/mobile_screenshot1.png" alt="in play mobile responsive screen" style="width: 50%;">
+<img src="images/readme_images/mobile_screenshot1.png" alt="in play mobile responsive screen" style="width: 50%">
 
 
 <br>
@@ -121,5 +121,7 @@ Don't forget to give the project a star! Thanks again!
 - [ ] differing time amounts allowed for different board sizes
 - [ ] leaderboard for shortest time making all matches based on board size
 - [ ] popup to tell the player that they need to select a board size if they try to click the start button without selecting a board size
+- [ ] in game music
+- [ ] ability to choose between regular floral deck and a floral deck with CA wildflowers
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
