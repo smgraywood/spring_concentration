@@ -71,7 +71,6 @@ function flipCard(evt) {
 	//if card1 is empty, set it to the event target for flip-card-inner
 	if(card1 === ""){
 		card1 = evt.target.closest(".flip-card-inner") 
-		console.log(card1)
 	}
 	else{
 		card2 = evt.target.closest(".flip-card-inner")
@@ -162,8 +161,6 @@ function flipped(cardContainer) {
 			}, 1000);
 			card1=""
 			card2=""
-			console.log("car1:" + card1, "card2:" + card2)
-			console.log(chosen)
 		}
 	}
 }
