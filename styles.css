@@ -267,12 +267,12 @@ img {
 	#gameBoard {
 		display: grid;
 		grid-template-columns: repeat(4, 20vmin);
-		gap: 3%;
+		gap: 1%;
 	}
 
 	.gameBoardBox {
-		height: 20vmin;
-		width: 20vmin;
+		height: 17vmin;
+		width: 17vmin;
 		border-radius: 100%;
 		display: flex;
 		justify-content: center;
