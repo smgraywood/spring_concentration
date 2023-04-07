@@ -68,6 +68,17 @@ init();
 
 //function to flip cards
 function flipCard(evt) {
+	//if card1 is empty, set it to the event target for flip-card-inner
+	if(card1 === ""){
+		card1 = evt.target.closest(".flip-card-inner") 
+		console.log(card1)
+	}
+	// if(card1 === evt.target.closest(".flip-card-inner")){
+	// 	return
+	// }
+	else{
+		card2 = evt.target.closest(".flip-card-inner")
+	}
 	//if the display of a card is disabled, do not do anything when it's clicked.
 	if (evt.target.style.display === "") {
 		return;
@@ -124,7 +135,7 @@ function init() {
 
 //function to create the flipping action on cards or not based on whether or not they're a match
 function flipped(cardContainer) {
-	//variable to hold the value of the parameter
+	// //variable to hold the value of the parameter
 	const card = cardContainer;
 	//if there are no cards chosen let the first card equal the parameter value
 	if (chosen.length === 0) {
@@ -139,7 +150,7 @@ function flipped(cardContainer) {
 	//if two cards have been chosen make a series of decisions based on whether or not those cards are matches
 	if (chosen.length === 2) {
 		//if the cards are a match, increment the matches variable, reset the chosen array, and check to see if that was the last matching pair
-		if (chosen[0] === chosen[1]) {
+		if (chosen[0] === chosen[1] && card1.id !== card2.id) {
 			matches++;
 			chosen = [];
 			checkWin();
@@ -152,6 +163,10 @@ function flipped(cardContainer) {
 					card.style.transform = "rotateY(0deg)";
 				});
 			}, 1000);
+			card1=""
+			card2=""
+			console.log("car1:" + card1, "card2:" + card2)
+			console.log(chosen)
 		}
 	}
 }
