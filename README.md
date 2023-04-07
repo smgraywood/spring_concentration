@@ -42,18 +42,29 @@ So, for my first game created for the General Assembly SEI program, I decided to
 * timer function counting down while game play happens
 * planned with [Figma](https://www.figma.com/file/5XNCj2WvwdM3QgI3AMKYlt/SPRING-CONCENTRATION?node-id=0-1&t=PYmLbOoPQuW83ZPu-0)
 
+##Gameplay
 
-<img src="images/readme_images/flowers_hidden.png">
-<img src="images/readme_images/flowers_exposed.png">
+When entering the game, a player has several user paths they can take. Gameplay is disabled until the user chooses their board size which will cause divs to disappear based on the number of tiles selected.
+Once the user selects a gameboard size and presses play, a timer will start. The timer is set to the same time (60 seconds) for every gameboard size, so the level of difficulty is determined by the gameboard size chosen by the user. 
+The user can then navigate through the game by clicking different tiles. If the two tiles are a match, they will stay facing up. However, if the two tiles do not match, they will turn back over after a 1 second delay allowing the user to see what flowers they previously chose while not delaying their ability to play. 
+If the user matches all of the tiles within the given time, a message displays at the top of the page telling them that they won. However if the user is unable to make all of the matches in time, the message displayed says "You Lost." 
+
+Feel free to go test it out!
+# Go Play! [github.io](https://smgraywood.github.io/spring_concentration/)
+
+These are images from the design process of the game
+<img src="images/readme_images/flowers_hidden.png" alt="image of the design for the game with the front of the pink tiles showing">
+<img src="images/readme_images/flowers_exposed.png" alt="image of the design for the game with the back of the pink tiles showing, exposing the side adorned with a flower">
 <br> 
 <br>
-
+This is an example of what the game looks like on mobile
 <img src="images/readme_images/mobile_screenshot1.png" alt="in play mobile responsive screen" style="width: 50%;">
 
 
 <br>
 <br>
-<img src="images/readme_images/gameplay_gif.gif" width="500px">
+This is a short video of what gameplay might look like
+<img src="images/readme_images/gameplay_gif.gif" width="500px" alt="a short gif of what gameplay looks like">
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
