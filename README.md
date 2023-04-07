@@ -55,8 +55,11 @@ So, for my first game created for the General Assembly SEI program, I decided to
 ## Gameplay
 
 When entering the game, a player has several user paths they can take. Gameplay is disabled until the user chooses their board size which will cause divs to disappear based on the number of tiles selected.
+
 Once the user selects a gameboard size and presses play, a timer will start. The timer is set to the same time (60 seconds) for every gameboard size, so the level of difficulty is determined by the gameboard size chosen by the user. 
+
 The user can then navigate through the game by clicking different tiles. If the two tiles are a match, they will stay facing up. However, if the two tiles do not match, they will turn back over after a 1 second delay allowing the user to see what flowers they previously chose while not delaying their ability to play. 
+
 If the user matches all of the tiles within the given time, a message displays at the top of the page telling them that they won. However if the user is unable to make all of the matches in time, the message displayed says "You Lost." 
 
 Feel free to go test it out!
