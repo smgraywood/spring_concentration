@@ -120,7 +120,6 @@ button {
 	opacity: 0.7;
 	margin-right: 3vmin;
 	margin-bottom: -1vmin;
-	margin-left: 50%;
 	border: solid .1vmin;
 }
 
@@ -267,7 +266,6 @@ img {
 	#timer-start-div-container{
 		margin: 0 auto;
 		justify-content: center;
-		padding-left: 50vmin;
 	}
 }
 
