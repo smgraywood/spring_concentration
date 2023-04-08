@@ -292,7 +292,8 @@ img {
 	}
 
 	#card-number-choice {
-		width: 30vmin
+		width: 30vmin;
+		padding-bottom:.5vmin;
 	}
 
 	label {
@@ -317,6 +318,7 @@ img {
 		margin: 0 auto;
 		justify-content: center;
 		padding-left: 29vmin;
+		margin-top: -5vmin;
 	}
 
 	button {
