@@ -8,9 +8,7 @@ body {
 
 #title1 {
 	font-family: "Glass Antiqua", cursive;
-	color: #ffd0d0;
-	-webkit-text-stroke-width: 0.25vmin;
-	-webkit-text-stroke-color: #f8879c;
+	color: #f8879c;
 	font-size: 6vmin;
 	text-align: center;
 	margin-top:-vmin;
