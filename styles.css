@@ -295,20 +295,19 @@ img {
 
 	#card-number-choice {
 		width: 30vmin;
-		height:9vmin;
+		height:14vmin;
 		margin-top:auto;
 	}
 
 	label {
-		font-size: 2.5vmin;
+		font-size: 3vmin;
 		text-align: center;
-		margin-top: 2vmin;
 	}
 
 	select {
 		font-size: 3vmin;
-		width: 15vmin;
-		height: 5vmin;
+		width: 20vmin;
+		height: 7vmin;
 	}
 
 	#timer-start-div-container{
