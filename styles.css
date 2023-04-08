@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
 
 body {
 	background-image: url(images/background.jpg);
@@ -8,8 +9,19 @@ body {
 #title1 {
 	font-family: "Glass Antiqua", cursive;
 	color: #f8879c;
-	font-size: 6vmin;
+	font-size: 5vmin;
 	text-align: center;
+}
+
+#rose-gif {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	flex-direction: column;
+	margin-top: -7vmin;
+	width: 15%;
 }
 
 #title2 {
@@ -17,14 +29,14 @@ body {
 	color: #ffd0d0;
 	-webkit-text-stroke-width: 0.25vmin;
 	-webkit-text-stroke-color: #f8879c;
-	font-size: 8vmin;
+	font-size: 6vmin;
 	text-align: center;
 	margin-top: -2vmin;
 }
 
-#instructions{
+#instructions {
 	color: #f8879c;
-	font-size:2vmin;
+	font-size: 2vmin;
 	text-align: center;
 	margin-top: -5vmin;
 }
@@ -40,7 +52,7 @@ body {
 	border-radius: 25px;
 	border: solid 3px black;
 	opacity: 0.8;
-	width: 20vmin;
+	width: 16vmin;
 	margin-top: -2vmin;
 }
 
@@ -52,7 +64,7 @@ label {
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
-	padding: 2vmin;
+	padding: .5vmin;
 	font-family: "Glass Antiqua", cursive;
 }
 
@@ -70,6 +82,12 @@ select {
 	background-color: black;
 	color: #f4f0e7;
 	border: solid 2px #f4f0e7;
+}
+
+#select-cards-number{
+	padding: 0px;
+	margin-top: -2.5vmin;
+	margin-bottom: -.05vmin;
 }
 
 #button-div {
@@ -97,18 +115,11 @@ button:hover {
 }
 
 #timer-div {
-	display: none;
-	position: relative;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
-	flex-direction: column;
-	background-color: #f4f0e7;
-	border-radius: 25px;
-	border: solid 3px black;
-	opacity: 0.8;
-	width: 40vmin;
-	padding: 3vmin;
+	color: #f8879c;
+	font-family: "Orbitron", sans-serif;
+	font-size: 2vmin;
+	display: grid;
+	grid-template-columns: repeat(6, 20vmin);
 }
 
 #status-message {
@@ -118,6 +129,15 @@ button:hover {
 	text-transform: uppercase;
 	-webkit-text-stroke-width: 0.5vmin;
 	-webkit-text-stroke-color: #ffd0d0;
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	background-color: #f4f0e7;
+	border-radius: 25px;
+	border: solid 3px black;
+	opacity: 0.9;
 }
 
 span {
@@ -132,17 +152,6 @@ span {
 img {
 	height: 15vmin;
 	width: 15vmin;
-}
-
-#rose-gif {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
-	flex-direction: column;
-	margin-top: -7vmin;
-	width: 15%;
 }
 #gameBoard {
 	justify-content: center;
@@ -221,9 +230,9 @@ img {
 	pointer-events: none;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1100px) {
 	#title1 {
-		font-size: 10vmin;
+		font-size: 8vmin;
 		margin-top: -2vmin;
 	}
 
@@ -231,6 +240,10 @@ img {
 		font-size: 7vmin;
 		margin-top: 1%;
 		margin-bottom: 5vmin;
+	}
+
+	#card-number-choice {
+		width: 30vmin
 	}
 
 	label {
@@ -241,13 +254,20 @@ img {
 	select {
 		font-size: 3vmin;
 		width: 15vmin;
-		height: 7vmin;
+		height: 5vmin;
+	}
+
+	#select-cards-number{
+		padding: 0px;
+		margin-top: -2.5vmin;
+		margin-bottom: -.05vmin;
 	}
 
 	button {
 		width: 30vmin;
 		height: 16vmin;
 		font-size: 6vmin;
+		margin-bottom: -3vmin;
 	}
 
 	#timer-div {
@@ -262,6 +282,10 @@ img {
 		justify-content: center;
 		margin: 0 auto;
 		text-align: center;
+	}
+	#status-message{
+		top: 75%;
+		left: 50%;
 	}
 
 	#gameBoard {
@@ -278,4 +302,21 @@ img {
 		justify-content: center;
 		margin: auto 0;
 	}
+}
+
+@media only screen and (max-width: 1500px) {
+		#gameBoard {
+			display: grid;
+			grid-template-columns: repeat(4, 20vmin);
+			gap: 1%;
+		}
+	
+		.gameBoardBox {
+			height: 17vmin;
+			width: 17vmin;
+			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			margin: auto 0;
+		}
 }
