@@ -7,10 +7,13 @@ body {
 }
 
 #title1 {
-	font-family: "Glass Antiqua", cursive;
-	color: #f8879c;
-	font-size: 5vmin;
+	font-family: "Ibarra Real Nova", serif;
+	color: #ffd0d0;
+	-webkit-text-stroke-width: 0.25vmin;
+	-webkit-text-stroke-color: #f8879c;
+	font-size: 4vmin;
 	text-align: center;
+	margin-top:-vmin;
 }
 
 #rose-gif {
@@ -21,7 +24,7 @@ body {
 	margin: 0 auto;
 	flex-direction: column;
 	margin-top: -7vmin;
-	margin-bottom: .5vmin;
+	margin-bottom: -5vmin;
 	width: 15%;
 }
 
@@ -32,17 +35,17 @@ body {
 	-webkit-text-stroke-color: #f8879c;
 	font-size: 6vmin;
 	text-align: center;
-	margin-top: -2vmin;
 }
 
 #instructions {
 	color: #f8879c;
 	font-size: 2vmin;
 	text-align: center;
-	margin-top: -5vmin;
+	margin-top:-4vmin;
 }
 
 #card-number-choice {
+	margin-top:-vmin;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -53,8 +56,9 @@ body {
 	border-radius: 25px;
 	border: solid 3px black;
 	opacity: 0.8;
-	width: 16vmin;
-	margin-top: -2vmin;
+	width: 18vmin;
+	padding-top: -4vmin;
+	margin-top:-4vmin;
 }
 
 label {
@@ -66,7 +70,7 @@ label {
 	flex-direction: column;
 	text-align: center;
 	padding: .5vmin;
-	font-family: "Glass Antiqua", cursive;
+	font-family: "Ibarra Real Nova", serif;
 }
 
 select {
@@ -76,9 +80,9 @@ select {
 	justify-content: center;
 	flex-direction: column;
 	margin-bottom: 3vmin;
-	font-family: "Glass Antiqua", cursive;
+	font-family: "Ibarra Real Nova", serif;
 	height: 4vmin;
-	width: 10vmin;
+	width: 12vmin;
 	font-size: 25px;
 	background-color: black;
 	color: #f4f0e7;
@@ -88,7 +92,7 @@ select {
 #select-cards-number{
 	padding: 0px;
 	margin-top: -2.5vmin;
-	margin-bottom: -.05vmin;
+	margin-bottom: .05vmin;
 }
 
 #timer-start-div{
@@ -239,6 +243,7 @@ img {
 	box-shadow: 0px 0.5vmin #f8879c;
 }
 
+
 .matched {
 	transform: rotateY(180deg);
 	pointer-events: none;
@@ -271,22 +276,33 @@ img {
 	#title1 {
 		font-size: 8vmin;
 		margin-top: -2vmin;
+		margin-bottom: -4vmin;
 	}
 
+	#rose-gif{
+		margin-top:-2vmin;
+		margin-bottom:-1.5vmin;
+	}
 	#title2 {
 		font-size: 7vmin;
 		margin-top: 1%;
 		margin-bottom: 5vmin;
 	}
+	#instructions{
+		margin-top: -5vmin;
+		margin-bottom: -2vmin;
+	}
 
 	#card-number-choice {
 		width: 30vmin;
-		padding-bottom:.5vmin;
+		height:9vmin;
+		margin-top:auto;
 	}
 
 	label {
-		font-size: 3vmin;
+		font-size: 2.5vmin;
 		text-align: center;
+		margin-top:-2vmin;
 	}
 
 	select {
@@ -297,8 +313,6 @@ img {
 
 	#select-cards-number{
 		padding: 0px;
-		margin-top: -2.5vmin;
-		margin-bottom: -.05vmin;
 	}
 
 	#timer-start-div-container{
@@ -350,7 +364,3 @@ img {
 		margin: auto 0;
 	}
 }
-
-
-
-
