@@ -248,22 +248,6 @@ img {
 	transform: rotateY(180deg);
 	pointer-events: none;
 }
-@media only screen and (min-width:1100px) and (max-width:2500px) {
-
-		#gameBoard {
-			gap: 1%;
-			margin-top: 10px;
-		}
-	
-		.gameBoardBox {
-			height: 17vmin;
-			width: 17vmin;
-			border-radius: 100%;
-			display: flex;
-			justify-content: center;
-			margin: auto 0;
-		}
-}
 
 @media only screen and (min-width: 1300px) {
 	#timer-start-div-container{
