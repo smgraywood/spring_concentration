@@ -116,7 +116,6 @@ Don't forget to give the project a star! Thanks again!
 
 - [ ] Reformating divs so that the display of fewer than 24 is cleaner looking
 - [ ] when flowers are matched, a short message about the genus of the flower and where and when it grows
-- [ ] differing time amounts allowed for different board sizes
 - [ ] leaderboard for shortest time making all matches based on board size
 - [ ] popup to tell the player that they need to select a board size if they try to click the start button without selecting a board size
 - [ ] in game music
