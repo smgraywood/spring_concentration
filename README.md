@@ -86,8 +86,6 @@ This is a short video of what gameplay might look like
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
  
 1. Clone the repo
    ```sh
