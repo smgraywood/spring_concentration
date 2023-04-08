@@ -92,12 +92,12 @@ select {
 }
 
 #timer-start-div{
+	width:60%;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	align-items: center;
-	justify-content: center;
 	padding-right: 15vmin;
+	margin: 0 auto;
+	margin-top: -1vmin;	
 }
 
 #button-div {
@@ -134,7 +134,6 @@ button:hover {
 	font-family: "Orbitron", sans-serif;
 	font-size: 2vmin;
 	display: grid;
-	grid-template-columns: repeat(6, 20vmin);
 	float: right;
 }
 
@@ -247,12 +246,6 @@ img {
 }
 @media only screen and (min-width:1100px) and (max-width:2500px) {
 
-	#timer-start-div-container{
-		width: 100vmin;
-		margin: 0 auto;
-		justify-content: center;
-		padding-left: 35vmin;
-	}
 		#gameBoard {
 			display: grid;
 			grid-template-columns: repeat(4, 20vmin);
@@ -272,7 +265,6 @@ img {
 
 @media only screen and (min-width: 1300px) {
 	#timer-start-div-container{
-		width: 100vmin;
 		margin: 0 auto;
 		justify-content: center;
 		padding-left: 50vmin;
@@ -314,10 +306,8 @@ img {
 	}
 
 	#timer-start-div-container{
-		width: 100vmin;
+		width: 100%;
 		margin: 0 auto;
-		justify-content: center;
-		padding-left: 29vmin;
 		margin-top: -5vmin;
 	}
 
@@ -352,6 +342,7 @@ img {
 		display: grid;
 		grid-template-columns: repeat(4, 20vmin);
 		gap: 1%;
+		margin-bottom:-20vmin;
 	}
 
 	.gameBoardBox {
