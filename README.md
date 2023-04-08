@@ -73,7 +73,10 @@ These are images from the design process of the game
 <br>
 This is an example of what the game looks like on mobile
 <br>
-<img src="images/readme_images/mobile_screenshot1.png" alt="in play mobile responsive screen" style="width: 50%">
+<div>
+<img src="images/readme_images/mobile_screenshot_1.png" alt="in play mobile responsive screen" style="width: 40%;display: grid;float: right">
+<img src="images/readme_images/mobile_screenshot_2.png" alt="in play mobile responsive screen" style="width: 40%;display: grid;float: left">
+</div>
 
 
 <br>
