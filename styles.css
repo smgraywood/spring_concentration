@@ -21,6 +21,7 @@ body {
 	margin: 0 auto;
 	flex-direction: column;
 	margin-top: -7vmin;
+	margin-bottom: .5vmin;
 	width: 15%;
 }
 
@@ -341,7 +342,7 @@ img {
 	}
 
 	#status-message{
-		top: 75%;
+		top: 63%;
 		left: 50%;
 	}
 
