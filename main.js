@@ -217,7 +217,7 @@ function updateTimer() {
 	if (timerLeft >= 0) {
 		document.getElementById(
 			"timer"
-		).innerHTML = `${timerLeft} seconds remaining`;
+		).innerHTML = `${timerLeft} seconds left`;
 	}
 	//otherwise go through loss logic
 	checkLoss();

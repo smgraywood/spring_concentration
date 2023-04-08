@@ -32,14 +32,17 @@
         </select>
     </div>
     <br>
-    <div id="button-div">    
-        <button id="start-button" onclick="init()">
-            START
-        </button>
+    <div id="timer-start-div-container">
+    <div id="timer-start-div">
+        <div id="button-div">    
+            <button id="start-button" onclick="init()">
+                START
+            </button>
+        </div>
+        <h1 id="status-message"></h1>
+        <h1 id="timer-div"><span id="timer">60 seconds left</span></h1>
     </div>
-<h1 id="status-message"></h1>
-    <h1 id="timer-div"><span id="timer"></span></h1>
-
+</div>
     <div id="gameBoard">
         <div class="flip-card" data-flowers="babys-breath">
             <div class="flip-card-inner" data-id="1" id ="card1">
